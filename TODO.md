@@ -1,16 +1,10 @@
-# Fix npm run dev for Portfolio
+# TODO: Fix Vercel Deprecation Warnings - Pure Vite Static Portfolio
 
-## Steps:
-- [ ] Step 1: Update package.json to add "dev" script
-- [ ] Step 2: Create vite.config.js
-- [ ] Step 3: Fix public/index.html asset paths (%PUBLIC_URL% → ./)
-- [x] Step 4: Install dependencies (npm install)
+## Approved Plan Steps:
+- [x] Step 1: Edit package.json (remove CRA/React deps, update scripts)\n- [x] Step 2: Edit vite.config.js (set outDir: 'dist')\n- [ ] Step 3: Delete package-lock.json
+- [ ] Step 4: Run `npm install` (regenerate clean lockfile)
+- [ ] Step 5: Test `npm run build` (verify dist/ output)
+- [ ] Step 6: Complete (warnings fixed for Vercel)
 
-- [ ] Step 5: Test `npm run dev`
-- [ ] Step 6: Test `npm run build` if needed
-
-Current progress: Step 4 ✅ In progress (npm install running). Next: `npm run dev` for Step 5.
-
-
-
+Progress tracked here. Updates after each step.
 

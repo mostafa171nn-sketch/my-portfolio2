@@ -2,39 +2,12 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "i18next": "^23.7.6",
-    "i18next-browser-languagedetector": "^7.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^13.5.0",
-    "react-scripts": "^5.0.1"
-  },
   "scripts": {
     "dev": "vite",
-    "start": "react-scripts start",
-    "build": "rmdir /s /q build 2>nul || del /s /q build\\* 2>nul && mkdir build && copy public\\index.html build\\index.html && copy public\\script.js build\\script.js && copy public\\styles.css build\\styles.css && xcopy /s /e /y public\\imags build\\imags",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^8.0.2"
+    "vite": "^5.4.8"
   }
 }
