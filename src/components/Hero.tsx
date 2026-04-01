@@ -9,7 +9,7 @@ export default function Hero() {
   const t = useTranslations('hero');
 
   useEffect(() => {
-    const text = "I am a professional front end developer";
+    const text = "I am a front end developer";
     let index = 0;
     const timer = setInterval(() => {
       index++;
@@ -18,21 +18,18 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-950/95 via-primary-900/90 to-primary-950/95" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/40 to-primary-800/20 backdrop-blur-xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,#A64D79,transparent),radial-gradient(circle_at_80%_20%,#6A1E55,transparent),radial-gradient(circle_at_40%_40%,rgba(166,77,121,0.1),transparent)] opacity-75" />
-        <div className="absolute top-0 left-0 w-full h-full particles" />
-      </div>
+      {/* Solid Black Background */}
+      <div className="absolute inset-0 bg-black/95" />
+      <div className="absolute top-0 left-0 w-full h-full particles opacity-20" />
 
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-className="relative z-10 text-left max-w-4xl mx-auto px-6 ml-12"
+        className="relative z-10 text-left max-w-4xl mx-auto px-6 ml-12"
       >
         <motion.h1 
           initial={{ opacity: 0 }}
@@ -49,7 +46,7 @@ className="relative z-10 text-left max-w-4xl mx-auto px-6 ml-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2 }}
-className="flex flex-col sm:flex-row gap-4 ml-auto mr-30 items-center mb-20 mt-8 w-fit"
+          className="flex flex-col sm:flex-row gap-4 ml-auto mr-30 items-center mb-20 mt-8 w-fit"
         >
           <Link 
             href="#contact"
@@ -82,12 +79,12 @@ className="flex flex-col sm:flex-row gap-4 ml-auto mr-30 items-center mb-20 mt-8
       <style jsx>{`
         .particles {
           background-image: 
-            radial-gradient(2px 2px at 20px 30px, #a793a7, transparent),
+            radial-gradient(5px 2px at 20px 30px, #ebebeb, transparent),
             radial-gradient(2px 2px at 40px 70px, #e7e0e5, transparent),
-            radial-gradient(1px 1px at 90px 40px, #aca9ab, transparent),
-            radial-gradient(1px 1px at 130px 80px, #b8a6af, transparent),
-            radial-gradient(2px 2px at 20px 120px, #ce90bc, transparent),
-            radial-gradient(2px 2px at 160px 20px, #bebabd, transparent);
+            radial-gradient(1px 2px at 90px 40px, #f8f1f6, transparent),
+            radial-gradient(1px 1px at 130px 80px, #f8f3f6, transparent),
+            radial-gradient(4px 2px at 20px 120px, #ebe6e9, transparent),
+            radial-gradient(2px 3px at 160px 20px, #bebabd, transparent);
           background-repeat: repeat;
           background-size: 200px 200px;
           animation: float 20s ease-in-out infinite;

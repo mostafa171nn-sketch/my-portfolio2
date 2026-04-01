@@ -45,8 +45,7 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="w-px h-5 bg-gray-700/50" />
-          <Link href="/ar" className="text-sm font-medium text-gray-300/70 hover:text-white transition-colors">AR</Link>
-          <Link href="/en" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">EN</Link>
+          
         </div>
 
         <button 

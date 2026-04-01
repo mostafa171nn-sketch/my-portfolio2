@@ -7,7 +7,7 @@
     "contact": "SEND ME"
   },
   "hero": {
-    "title": "I am a professional web developer",
+    "title": "I am a front-end developer",
     "cta": "Start your project"
   },
   "about": {
@@ -95,3 +95,4 @@
     "submit": "Send Message"
   }
 }
+

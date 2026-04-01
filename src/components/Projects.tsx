@@ -1,4 +1,4 @@
-'use client';
+ 'use client';
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
@@ -70,7 +70,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-className="group relative bg-[#3B1C32]/70 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-purple-500/60 hover:bg-[#3B1C32]/80 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20 overflow-hidden"
+              className="group relative bg-[#3B1C32]/70 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-purple-500/60 hover:bg-[#3B1C32]/80 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20 overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
