@@ -18,11 +18,10 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
-
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Solid Black Background */}
-      <div className="absolute inset-0 bg-black/95" />
+      {/* Solid Beige Background */}
+      <div className="absolute inset-0 bg-primary-900/95" />
       <div className="absolute top-0 left-0 w-full h-full particles opacity-20" />
 
       <motion.div 
@@ -35,12 +34,17 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-6xl md:text-8xl font-black leading-tight mb-8 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent drop-shadow-2xl"
+          className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6.5rem] font-bold leading-tight mb-8 text-primary-900 drop-shadow-2xl shadow-primary-900/50"
         >
           HELLO
-          <br />
-          {t('title')}
         </motion.h1>
+        <motion.div className="text-[1.8rem] md:text-[5.5rem] lg:text-[3.5rem] xl:text-[4.5rem] font-bold leading-tight text-primary-900 drop-shadow-xl shadow-primary-900/30">
+          I am a 
+          <br className="md:hidden" />
+          <span className="block md:inline"> front-end </span> 
+          <br className="md:hidden lg:inline-block" />
+          developer
+        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -56,9 +60,8 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -skew-x-3" />
           </Link>
           <motion.button 
-            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-12 py-4 border-2 bg-primary-glass rounded-full text-lg font-semibold text-white hover:border-primary-700/80 transition-all duration-300 shadow-lg hover:shadow-primary-glow"
+            className="px-12 py-4 border-2 bg-primary-glass rounded-full text-lg font-semibold text-primary-900 hover:border-primary-700/80 transition-all duration-300 shadow-lg hover:shadow-primary-glow"
           >
             View Work
           </motion.button>
@@ -70,7 +73,7 @@ export default function Hero() {
           transition={{ delay: 1.5 }}
           className="flex gap-2 justify-center text-sm text-primary-400/80"
         >
-          <div className="w-24 h-0.5 bg-gradient-to-r mrr from-primary-700 to-primary-800 rounded-full shadow-primary-glow" />
+          <div className="w-24 h-0.5 bg-gradient-to-r from-primary-700 to-primary-800 rounded-full shadow-primary-glow" />
           <span></span>
           <div className="w-24 h-0.5 bg-gradient-to-r from-primary-700 to-primary-800 rounded-full shadow-primary-glow" />
         </motion.div>
@@ -79,12 +82,12 @@ export default function Hero() {
       <style jsx>{`
         .particles {
           background-image: 
-            radial-gradient(5px 2px at 20px 30px, #ebebeb, transparent),
-            radial-gradient(2px 2px at 40px 70px, #e7e0e5, transparent),
-            radial-gradient(1px 2px at 90px 40px, #f8f1f6, transparent),
-            radial-gradient(1px 1px at 130px 80px, #f8f3f6, transparent),
-            radial-gradient(4px 2px at 20px 120px, #ebe6e9, transparent),
-            radial-gradient(2px 3px at 160px 20px, #bebabd, transparent);
+            radial-gradient(5px 2px at 20px 30px, #000000, transparent),
+            radial-gradient(4px 2px at 40px 70px, #000000, transparent),
+            radial-gradient(3px 2px at 90px 40px, #000000, transparent),
+            radial-gradient(4px 2px at 130px 80px, #0c0c0c, transparent),
+            radial-gradient(4px 3px at 20px 120px, #050505, transparent),
+            radial-gradient(2px 3px at 160px 20px, #000000, transparent);
           background-repeat: repeat;
           background-size: 200px 200px;
           animation: float 20s ease-in-out infinite;

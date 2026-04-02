@@ -20,24 +20,36 @@ body {
 
 @layer utilities {
   .text-primary-gradient {
-    background: linear-gradient(135deg, #A64D79 0%, #6A1E55 50%, #3B1C32 100%);
+    background: linear-gradient(135deg, #C9B59C 0%, #D9CFC7 50%, #EFE9E3 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
   .bg-primary-glass {
-    background: linear-gradient(145deg, rgba(26, 26, 29, 0.9), rgba(59, 28, 50, 0.8));
+    background: linear-gradient(145deg, rgba(239, 233, 227, 0.9), rgba(249, 248, 246, 0.8));
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(166, 77, 121, 0.2);
+    border: 1px solid rgba(217, 207, 199, 0.3);
   }
   
   .shadow-primary-glow {
-    box-shadow: 0 25px 50px -12px rgba(166, 77, 121, 0.25);
+    box-shadow: 0 25px 50px -12px rgba(201, 181, 156, 0.3);
   }
   
   .border-primary-glow {
-    box-shadow: 0 0 0 1px rgba(166, 77, 121, 0.2);
+    box-shadow: 0 0 0 1px rgba(201, 181, 156, 0.3);
   }
 }
 
+.send-me-button {
+  color: #BFA28C !important;
+}
+.rr{
+  color: #bd9c82 !important;
+}
+.bbb{
+  background: #fcf5ef;
+}
+.cc{
+  color: F3E4C9 !important;
+}

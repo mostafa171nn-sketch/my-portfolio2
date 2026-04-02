@@ -29,9 +29,9 @@ export default class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center p-8 bg-gradient-to-br from-gray-50 to-white">
+        <div className="min-h-screen flex items-center justify-center p-8 bg-gradient-to-br from-primary-950 to-primary-900">
           <div className="max-w-md mx-auto text-center">
-            <h2 className="text-4xl font-bold text-red-600 mb-4">Something went wrong</h2>
+            <h2 className="text-4xl font-bold text-primary-700 mb-4">Something went wrong</h2>
             <p className="text-lg text-gray-600 mb-8">The app crashed. Check console for details.</p>
             <button 
               onClick={() => window.location.reload()} 

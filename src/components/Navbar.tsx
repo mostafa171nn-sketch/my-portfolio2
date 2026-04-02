@@ -24,10 +24,10 @@ export default function Navbar() {
     <motion.nav 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#1A1A1D] border-b border-[#3B1C32] shadow-2xl shadow-[#1A1A1D]/50"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-surface/90 border-b border-muted shadow-lg"
     >
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between ">
-        <Link href="/" className="text-2xl font-bold text-white drop-shadow-2xl shadow-white/50">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <Link href="/" className="text-2xl font-bold text-primary drop-shadow-md">
           Portfolio
         </Link>
         
@@ -36,52 +36,42 @@ export default function Navbar() {
             <Link
               key={item.id}
               href={item.href}
-              className={`relative group text-sm font-medium transition-all duration-300 hover:text-white/90 ${
-                pathname === item.href ? "text-white" : "text-gray-300/70"
-              }`}
+              className={`relative group text-sm font-medium transition-all duration-300 hover:text-primary-700 ${pathname === item.href ? "text-primary" : "text-muted"}`}
             >
               {t(item.id)}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#6A1E55] to-[#A64D79] group-hover:w-full transition-all duration-300 origin-left"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300 origin-left"></span>
             </Link>
           ))}
-          <div className="w-px h-5 bg-gray-700/50" />
-          
+          <div className="w-px h-5 bg-border/50" />
         </div>
 
         <button 
           className="md:hidden p-1"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
-          <Menu className="w-6 h-6 text-gray-300" />
+          <Menu className="w-6 h-6 text-muted" />
         </button>
       </div>
 
       <AnimatePresence>
         {mobileOpen && (
-            <motion.div
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#1A1A1D] border-t border-[#3B1C32] backdrop-blur-xl shadow-2xl"
+            className="md:hidden bg-surface/95 border-t border-muted backdrop-blur-xl"
           >
-
-            <div className="px-6 py-8 space-y-4">
+            <div className="px-6 py-8 space-y-4 text-center mx-auto max-w-sm">
               {navItems.map((item) => (
                 <Link
                   key={item.id}
                   href={item.href}
-                  className="block text-lg font-medium text-white/90 hover:text-white transition-colors"
+                  className="block text-lg font-medium text-primary hover:text-primary-700 transition-colors"
                   onClick={() => setMobileOpen(false)}
-
                 >
                   {t(item.id)}
                 </Link>
               ))}
-              <div className="pt-4 space-y-2 text-sm">
-                <Link href="/ar" className="block text-gray-300/80 hover:text-white">AR</Link>
-                <Link href="/en" className="block text-gray-300/80 hover:text-white">EN</Link>
-
-              </div>
             </div>
           </motion.div>
         )}

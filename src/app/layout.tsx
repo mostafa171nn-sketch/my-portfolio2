@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" dir="ltr" className={`${inter.variable} ${jetbrains.variable} font-sans antialiased`}>
-      <body className="bg-[#3B1C32] text-white min-h-screen overflow-x-hidden antialiased">
+      <body className="bg-background text-primary min-h-screen overflow-x-hidden antialiased">
         {children}
       </body>
     </html>

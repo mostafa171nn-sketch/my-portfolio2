@@ -9,9 +9,9 @@ export default function Contact() {
   const t = useTranslations('contact');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Contact form submitted:', message);
+    console.log("Contact form submitted:", message);
   };
 
   return (
@@ -20,7 +20,7 @@ export default function Contact() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-className="py-20 px-6 md:px-12 lg:px-24 bg-[#3B1C32]"
+      className="py-20 px-6 md:px-12 lg:px-24 bg-primary-950"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div 
@@ -29,16 +29,15 @@ className="py-20 px-6 md:px-12 lg:px-24 bg-[#3B1C32]"
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-700 via-primary-800 to-primary-700 bg-clip-text text-transparent mb-6 drop-shadow-2xl">
-            {t('title') || 'Get In Touch'}
+          <h2 className="rr text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-700 via-primary-800 to-primary-700 bg-clip-text text-transparent mb-6 drop-shadow-2xl">
+            {t("title") || "Get In Touch"}
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Have a project in mind? Let\'s bring it to life together.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -48,12 +47,12 @@ className="py-20 px-6 md:px-12 lg:px-24 bg-[#3B1C32]"
             <div className="space-y-6">
               <div className="flex items-center gap-4 p-6 bg-primary-900/70 backdrop-blur-xl rounded-2xl border border-primary-800/50 hover:border-primary-700/70 transition-all duration-300 shadow-xl hover:shadow-primary-900/20">
                 <div className="w-12 h-12 bg-gradient-to-r from-primary-700 to-primary-800 rounded-xl flex items-center justify-center shadow-lg">
-                  <Mail className="w-6 h-6 text-white" />
+                  <Mail className="w-6 h-6 text-primary-900" />
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-white mb-1">Email</h3>
-                  <a href="mailto:mostafa171nn@gamil.com" className="text-gray-300 hover:text-primary-400 transition-colors text-sm font-medium">
+                  <h3 className="rr font-semibold  mb-1">Email</h3>
+                  <a href="mailto:mostafa171nn@gamil.com" className="text-gray-700 hover:text-primary-400 transition-colors text-sm font-medium">
                     mostafa171nn@gamil.com
                   </a>
                 </div>
@@ -61,12 +60,12 @@ className="py-20 px-6 md:px-12 lg:px-24 bg-[#3B1C32]"
 
               <div className="flex items-center gap-4 p-6 bg-primary-900/70 backdrop-blur-xl rounded-2xl border border-primary-800/50 hover:border-primary-700/70 transition-all duration-300 shadow-xl hover:shadow-primary-900/20">
                 <div className="w-12 h-12 bg-gradient-to-r from-primary-800 to-primary-700 rounded-xl flex items-center justify-center shadow-lg">
-                  <Phone className="w-6 h-6 text-white" />
+                  <Phone className="w-6 h-6 text-primary-900" />
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-white mb-1">Phone</h3>
-                  <a href="tel:+201111695090" className="text-gray-300 hover:text-primary-400 transition-colors text-sm font-medium">
+                  <h3 className="rr font-semibold  mb-1">Phone</h3>
+                  <a href="tel:+201111695090" className="text-gray-700 hover:text-primary-400 transition-colors text-sm font-medium">
                     01111695090
                   </a>
                 </div>
@@ -74,7 +73,6 @@ className="py-20 px-6 md:px-12 lg:px-24 bg-[#3B1C32]"
             </div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -83,7 +81,7 @@ className="py-20 px-6 md:px-12 lg:px-24 bg-[#3B1C32]"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-gray-300 mb-2 font-medium">{t('name') || 'Name'}</label>
+                <label className="rr block text-gray-300 mb-2 font-medium">{t('name') || 'Name'}</label>
                 <input 
                   type="text" 
                   required
@@ -92,7 +90,7 @@ className="py-20 px-6 md:px-12 lg:px-24 bg-[#3B1C32]"
                 />
               </div>
               <div>
-                <label className="block text-gray-300 mb-2 font-medium">{t('email') || 'Email'}</label>
+                <label className="rr block text-gray-300 mb-2 font-medium">{t('email') || 'Email'}</label>
                 <input 
                   type="email" 
                   required
@@ -101,7 +99,7 @@ className="py-20 px-6 md:px-12 lg:px-24 bg-[#3B1C32]"
                 />
               </div>
               <div>
-                <label className="block text-gray-300 mb-2 font-medium">{t('message') || 'Message'}</label>
+                <label className="rr block text-gray-300 mb-2 font-medium">{t('message') || 'Message'}</label>
                 <textarea 
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -115,7 +113,8 @@ className="py-20 px-6 md:px-12 lg:px-24 bg-[#3B1C32]"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="w-full bg-gradient-to-r from-primary-800 via-primary-700 to-primary-800 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:from-primary-700 hover:to-primary-900 transition-all duration-300 shadow-2xl hover:shadow-primary-700/50 backdrop-blur-sm border border-primary-700/50"
+                style={{ color: '#BFA28C' }}
+                className="w-full bg-gradient-to-r from-primary-800 via-primary-700 to-primary-800 py-4 px-8 rounded-xl font-bold text-xl hover:from-primary-700 hover:to-primary-900 transition-all duration-300 shadow-2xl hover:shadow-primary-700/50 backdrop-blur-sm border border-primary-700/50"
               >
                 {t('submit') || 'Send Message'}
               </motion.button>
@@ -126,4 +125,3 @@ className="py-20 px-6 md:px-12 lg:px-24 bg-[#3B1C32]"
     </motion.section>
   );
 }
-
