@@ -33,7 +33,7 @@ export default function Contact() {
             {t("title") || "Get In Touch"}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have a project in mind? Let\'s bring it to life together.
+           <span className='nn'>Have</span> a project in mind <span className='nn'>?</span><br /> Let's bring it to <span className='nn'>life</span> together<span className='nn'>.</span>
           </p>
         </motion.div>
 

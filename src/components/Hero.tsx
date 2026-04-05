@@ -28,7 +28,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 text-left max-w-4xl mx-auto px-6 ml-12"
+        className="relative z-10 text-left max-w-4xl mx-auto px-6"
       >
         <motion.h1 
           initial={{ opacity: 0 }}
@@ -36,35 +36,35 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 1 }}
           className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] xl:text-[6.5rem] font-bold leading-tight mb-8 text-primary-900 drop-shadow-2xl shadow-primary-900/50"
         >
-          HELLO
+          H<span className='text-white'>E</span>LLO
         </motion.h1>
-        <motion.div className="text-[1.8rem] md:text-[5.5rem] lg:text-[3.5rem] xl:text-[4.5rem] font-bold leading-tight text-primary-900 drop-shadow-xl shadow-primary-900/30">
-          I am a 
+        <motion.div className="text-[1.8rem] md:text-[5.5rem] lg:text-[3.5rem] xl:text-[4.5rem] font-bold leading-[1.1] text-primary-900 drop-shadow-xl shadow-primary-900/30">
+         I am a 
           <br className="md:hidden" />
-          <span className="block md:inline"> front-end </span> 
+          <span className="block md:inline"> front<span className='text-white' >-</span>end </span> 
           <br className="md:hidden lg:inline-block" />
-          developer
+          devel<span className='text-white'></span>oper
         </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2 }}
-          className="flex flex-col sm:flex-row gap-4 ml-auto mr-30 items-center mb-20 mt-8 w-fit"
+          className="flex flex-col sm:flex-row gap-4 mx-auto justify-center items-center mb-20 mt-8 w-fit whitespace-nowrap"
         >
           <Link 
             href="#contact"
-            className="group relative px-12 py-4 bg-gradient-to-r from-primary-800 via-primary-700 to-primary-800 text-white font-bold text-lg rounded-full overflow-hidden hover:scale-[1.02] transition-all duration-500 shadow-2xl hover:shadow-primary-glow hover:shadow-2xl"
+            className="group relative flex items-center justify-center px-10 py-5 bg-gradient-to-r from-primary-800 via-primary-700 to-primary-800 text-primary-950 font-bold text-base rounded-full overflow-hidden hover:scale-[1.02] transition-all duration-500 shadow-2xl hover:shadow-primary-glow hover:shadow-2xl flex-1 text-center leading-none h-full min-h-[3rem]"
           >
             <span className="relative z-10">{t('cta')}</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -skew-x-3" />
+            <div className="text-center justify-center m-auto absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -skew-x-3" />
           </Link>
-          <motion.button 
-            whileTap={{ scale: 0.95 }}
-            className="px-12 py-4 border-2 bg-primary-glass rounded-full text-lg font-semibold text-primary-900 hover:border-primary-700/80 transition-all duration-300 shadow-lg hover:shadow-primary-glow"
+          <Link 
+            href="#portfolio"
+            className="flex items-center justify-center px-8 py-4 border-2 bg-primary-glass rounded-full text-base font-semibold text-primary-900 hover:border-primary-700/80 transition-all duration-300 shadow-lg hover:shadow-primary-glow flex-1 text-center leading-none h-full min-h-[3rem] cursor-pointer hover:scale-[1.02] active:scale-95"
           >
-            View Work
-          </motion.button>
+            View My Projects
+          </Link>
         </motion.div>
 
         <motion.div 
@@ -100,4 +100,3 @@ export default function Hero() {
     </section>
   );
 }
-
