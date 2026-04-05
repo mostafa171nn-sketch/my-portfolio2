@@ -9,7 +9,7 @@ export default function Contact() {
   const t = useTranslations('contact');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Contact form submitted:", message);
   };
