@@ -57,18 +57,18 @@
   "projects": {
     "title": "MY PROJECTS",
     "1": {
-      "title": "Global Student",
-      "desc": "website for foreign expatriates",
-      "url": "https://website-for-expatriate-universities.vercel.app"
+      "title": "rantika",
+      "desc": " • personal website for selling wedding products but not completed yet ",
+      "url": "https://rantika-2rr.vercel.app"
     },
     "2": {
       "title": "My Dream Academy",
-      "desc": "swimming academy",
+      "desc": "swimming academy porsonal project",
       "url": "https://my-dream11-steel.vercel.app"
     },
     "3": {
       "title": "E-commerce App",
-      "desc": "shopping website",
+      "desc": "                  •  frout academy's latest project built a dynamic e-commerce platform with product listing and API integration",
       "url": "https://e-commerce-nine-lilac-72.vercel.app"
     },
     "4": {
@@ -78,13 +78,18 @@
     },
     "5": {
       "title": "Fun Food Website",
-      "desc": "fun food",
+      "desc": " • Technologies: React.js, Next.js, Tailwind CSS, REST APIs , GSAP , Admin Dashboard , staticdata , App router",
       "url": "https://fun-food.vercel.app"
     },
     "6": {
       "title": "My Dream Academy Dashboard",
-      "desc": "Academy control panel",
+      "desc": "          user-name = 7elmy  password = 11mostafa11",
       "url": "https://my-dream11-steel.vercel.app/dashboard"
+    },
+    "7":{
+      "title":"HiddenGo",
+      "desc":" • this project to student in BUE university  Technologies : React.js, Next.js, Tailwind CSS,",
+      "url":"   https://moamen-6po9.vercel.app" 
     }
   },
   "contact": {

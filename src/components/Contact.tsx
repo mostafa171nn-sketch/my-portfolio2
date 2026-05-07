@@ -70,6 +70,19 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
+              <div className="flex items-center gap-4 p-6 bg-primary-900/70 backdrop-blur-xl rounded-2xl border border-primary-800/50 hover:border-primary-700/70 transition-all duration-300 shadow-xl hover:shadow-primary-900/20">
+                <div className="w-12 h-12 bg-gradient-to-r from-primary-800 to-primary-700 rounded-xl flex items-center justify-center shadow-lg">
+                  <Phone className="w-6 h-6 text-primary-900" />
+                </div>
+
+                <div>
+                  <h3 className="rr font-semibold  mb-1">linked IN</h3>
+                  <a href="linked in " className="text-gray-700 hover:text-primary-400 transition-colors text-sm font-medium">
+                                     www.linkedin.com/in/mostafa-omar-97478932a
+
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
 
