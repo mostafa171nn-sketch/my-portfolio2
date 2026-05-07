@@ -1,8 +1,10 @@
 # TODO
-- [ ] فهم سبب عدم ظهور التعديلات (caching/locale + أخطاء keys في Projects)
-- [ ] تعديل `src/components/Projects.tsx`:
-  - [ ] تصحيح `titleKey/descKey` للمشروع رقم 7 (يستخدم 7 بدل 6)
-  - [ ] تصحيح `url` للمشروع رقم 7 (يستخدم 7.url بدل 6.url)
-- [ ] بعد التعديل: تشغيل build/Start جديد (clean + dev server reload)
-- [ ] اختبار: فتح `/en/#portfolio` و `/ar/#portfolio` والتأكد أن النص/الروابط تغيّرت
+
+- [x] Update `src/components/Contact.tsx` LinkedIn contact block:
+  - [x] Replace the Phone icon (currently used) with a LinkedIn icon.
+  - [x] Fix the LinkedIn URL link (`href`) and link text.
+  - [x] Ensure proper spacing/formatting for label ("LinkedIn").
+
+
+- [ ] Run lint/build (if available) to confirm no TypeScript/ESLint issues.
 

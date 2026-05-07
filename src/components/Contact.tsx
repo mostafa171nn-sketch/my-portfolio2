@@ -1,8 +1,8 @@
-'use client';
+       'use client';
 
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, Link2 } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -33,7 +33,7 @@ export default function Contact() {
             {t("title") || "Get In Touch"}
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-           <span className='nn'>Have</span> a project in mind <span className='nn'>?</span><br /> Let's bring it to <span className='nn'>life</span> together<span className='nn'>.</span>
+           <span className='nn'>Have</span> a project in mind <span className='nn'>?</span><br /> Let&apos;s bring it to <span className='nn'>life</span> together<span className='nn'>.</span>
           </p>
         </motion.div>
 
@@ -60,7 +60,8 @@ export default function Contact() {
 
               <div className="flex items-center gap-4 p-6 bg-primary-900/70 backdrop-blur-xl rounded-2xl border border-primary-800/50 hover:border-primary-700/70 transition-all duration-300 shadow-xl hover:shadow-primary-900/20">
                 <div className="w-12 h-12 bg-gradient-to-r from-primary-800 to-primary-700 rounded-xl flex items-center justify-center shadow-lg">
-                  <Phone className="w-6 h-6 text-primary-900" />
+                                  <Phone className="w-6 h-6 text-primary-900" />
+
                 </div>
 
                 <div>
@@ -72,14 +73,19 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-4 p-6 bg-primary-900/70 backdrop-blur-xl rounded-2xl border border-primary-800/50 hover:border-primary-700/70 transition-all duration-300 shadow-xl hover:shadow-primary-900/20">
                 <div className="w-12 h-12 bg-gradient-to-r from-primary-800 to-primary-700 rounded-xl flex items-center justify-center shadow-lg">
-                  <Phone className="w-6 h-6 text-primary-900" />
+                        <Link2 className="w-6 h-6 text-primary-900" />
+
                 </div>
 
                 <div>
-                  <h3 className="rr font-semibold  mb-1">linked IN</h3>
-                  <a href="linked in " className="text-gray-700 hover:text-primary-400 transition-colors text-sm font-medium">
-                                     www.linkedin.com/in/mostafa-omar-97478932a
-
+                  <h3 className="rr font-semibold  mb-1">LinkedIn</h3>
+                  <a
+                    href="https://www.linkedin.com/in/mostafa-omar-97478932a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-primary-400 transition-colors text-sm font-medium break-all"
+                  >
+                    https://www.linkedin.com/in/mostafa-omar-97478932a
                   </a>
                 </div>
               </div>
